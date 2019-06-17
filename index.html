@@ -1,77 +1,18 @@
-<!DOCTYPE html5>
-<!-- Hello World! -->
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>heylfda</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script>
-        var url = 'http://www.tuling123.com/openapi/api';
-        parms = {
-            'key' : '891c3b602b85424ebca432794c431f8d',
-            'info' : cmd,
-            'userid' : '123456'
-        };
-
-        function displayDate() {
-            document.getElementById("demo").innerHTML = Date();
-        }
-        function sendData() {
-            var input = document.getElementById("input").value;
-            if (input != "" & input != "\n") {
-                document.getElementById("output").value += input;
-            };
-            clearInput();
-        }
-        function clearOutput() {
-            document.getElementById("output").value = "";
-        }
-        function clearInput() {
-            document.getElementById("input").value = "";
-        }
-
-        function keyPressed(event) {
-            var event = event || window.event;
-            document.getElementById("demo").innerHTML = event.keyCode;
-            if (event.keyCode == 13) {
-                sendData();
-            }
-        }
-    </script>
-</head>
+<meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 
 <body>
 
-    <button type="button" onclick="displayDate()">show date</button>
-    <p id="demo"></p>
 
-    <form>
-        <div id="container" style="width:500px">
-            <h1 style="margin-bottom:0;text-align: center">Talk with 2ya</h1>
-        </div>
-    </form>
+    <div id="main_div">
+        <p></p>
+        <a href="./hey2ya/hey2ya.html">hey2ya</a>
 
-    <div id="container" style="width:500px">
+        <p></p>
 
-        <div id="header" style="background-color:rgb(255, 60, 0);">
-            <h1 style="margin-bottom:0;text-align: center">2ya</h1>
-        </div>
+        <a href="./arrow/arrow.html">arrow</a>
 
-        <div id="board" style="background-color:rgb(252, 172, 1);height: 200px;width: 500px;float: center">
-            <!-- <textarea id="output" style="height: 150px; width: 500px;" maxlength="1000"></textarea> -->
-            <textarea id="output" maxlength="100" readonly="readonly"></textarea>
-        </div>
-
-        <div id="writer" style="background-color:rgb(252, 120, 1);height: 200px;width: 500px;float: center">
-            <!-- <textarea id="input" style="height: 150px; width: 500px;" maxlength="1000"></textarea> -->
-            <textarea id="input" maxlength="100" onkeyup="keyPressed(event)"></textarea>
-        </div>
-
-        <div id="send" style="background-color:rgb(252, 172, 1);height: 20px;width: 500px;float: center">
-            <button type="button" onclick="clearOutput()" style="background-color:rgb(255, 60, 0);float:right">Clear</button>
-            <button type="button" onclick="sendData()" style="background-color:rgb(255, 60, 0);float:right">Send</button>
-        </div>
     </div>
 
 </body>
