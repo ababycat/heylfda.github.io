@@ -34,7 +34,6 @@ function draw() {
 
     background(255);
     
-
     nx = noise(idx) * width;
     ny = noise(idy) * height;
 
@@ -90,7 +89,6 @@ let MovingArrow = function (arrow_len, center_dist, angle, cx, cy, radius) {
 
     this.alive = () => !(this.len() < MIN_LIVE_LEN_RATE * this.radius);
 }
-
 
 function mousePressed() {
   if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
