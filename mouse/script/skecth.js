@@ -75,7 +75,7 @@ let Partical = function (cx, cy, radius) {
 
     this.in_disired = function () {
         ++this.step_clock;
-        text(this.step_clock.toString(), 10, 30);
+        // text(this.step_clock.toString(), 10, 30);
         if(this.step_clock <= PATTEN_CHANGE_STEP){
             return this.distance < IN_DISERED_DISTANCE; //random(IN_DISERED_DISTANCE*0.8, IN_DISERED_DISTANCE*1.2);
         }else if(this.step_clock <= 2*PATTEN_CHANGE_STEP){
