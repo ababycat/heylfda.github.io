@@ -23,7 +23,8 @@ function setup() {
     START_COLOR = color("#6495ED");
     END_COLOR = color("#FF8C00");
 
-    let myCanvas = createCanvas(500, 500);
+    // let myCanvas = createCanvas(500, 500);
+    let myCanvas = createCanvas(displayWidth, displayHeight);
     myCanvas.parent('myContainer');
     // p = new MovingArrow(150, 10, PI/4, width, height, 150);
 }

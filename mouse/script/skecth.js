@@ -17,7 +17,8 @@ let move_step = 0.005;
 let sqrt_r = (dx, dy) => Math.sqrt(Math.pow(dx, 2)+Math.pow(dy, 2));
 
 function setup() {
-    let myCanvas = createCanvas(500, 500);
+    // let myCanvas = createCanvas(500, 500);
+    let myCanvas = createCanvas(displayWidth, displayHeight);
     myCanvas.parent('myContainer');
     for (let i = 0; i < PARTICAL_NUM; ++i) {
         p_list[i] = new Partical(random(0, width), random(0, height), RADIUS)
@@ -86,3 +87,12 @@ let Partical = function (cx, cy, radius) {
         }
     };
 }
+
+
+function mousePressed() {
+    if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+      let fs = fullscreen();
+      fullscreen(!fs);
+      // fullscreen();
+    }
+  }
